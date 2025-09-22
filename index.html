@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FAQ Project - João Gabriel R. R.">
+    <meta name="author" content="João Gabriel R. R.">
+    <meta name="keywords" content="FAQ">
+    <title>Projeto - FAQ</title>
+    <style>
+        body {
+            background-color: wheat;
+        }
+        
+        main {
+            padding: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background-color: #463f3f;
+            color: white;
+            margin: 0px;
+            border-radius: 20px;
+            width: 65%;
+            height: auto;
+            overflow: hidden;
+        }
+
+        .faq-title {
+            text-align: center;
+            padding-top: 2px;
+        }
+
+        .faq-body {
+            background-color: #232323;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            margin-bottom: -16px;
+
+        }
+
+        .topic-title-div {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .topic-div {
+            margin-left: -40px;
+            padding: 50px;
+            border-radius: 20px;
+
+        }
+
+        .button-show {
+            border: transparent;
+            background-color: transparent;
+            padding: 0;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+            cursor: pointer;
+            height: 16px;
+            width: 23px;
+            /* background-color: red; */
+
+            transition: all 0.3s cubic-bezier(0.11, 0.56, 0.48, 0.95);
+        }
+
+        .row {
+            border: 1px solid white;
+            background-color: white;
+            height: 4px;
+            border-radius: 6px;
+
+        }
+
+        .row:first-child {
+            transform: translate(0px, 5px);
+            /* background-color: red; */
+        }
+
+        .row:last-child {
+            transform: translate(0px, -3px) rotate(90deg);
+        }
+
+        .button-show.ativo {
+            transform: rotate(45deg);
+        }
+
+        .topic {
+            list-style-type: none;
+        }
+
+        .topic-title-div {
+            background-color: #463f3fd8;
+            margin-left: -20px;
+            margin-right: -20px;
+            color: white;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            position: relative;
+            z-index: 3;
+
+
+        }
+
+        .topic-title-div.showDiv1 {
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+
+        .topic-title-div.showDiv2 {
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+
+        .topic-title-div.showDiv3 {
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+
+        #first-topic-title-div {
+            margin-top: -15px;
+        }
+
+        #second-topic-title-div,
+        #third-topic-title-div {
+            margin-top: -70px;
+        }
+
+
+        .topic-body {
+            display: none;
+            padding: 20px;
+            list-style-type: none;
+            background-color: white;
+            color: black;
+            margin-right: -20px;
+            margin-left: -20px;
+            position: relative;
+            z-index: 2;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        .topic-body.visible1 {
+            display: block;
+        }
+
+        .topic-body.visible2 {
+            display: block;
+        }
+
+        .topic-body.visible3 {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Projeto - FAQ</h1>
+    </header>
+    <main>
+        <div class="container">
+            <div class="faq-title">
+                <h2>Perguntas Frequentes</h2>
+            </div>
+            <div class="faq-body">
+                <ul>
+                    <div class="topic-div">
+                        <li class="topic">
+                            <div class="topic-title-div" id="first-topic-title-div">
+                                <button class="button-show" id="button1">
+                                    <span class="row"></span>
+                                    <span class="row"></span>
+                                </button>
+                                <h2 class="topic-title" id="first-topic-title">
+                                    Primeiros Passos e Conceitos Básicos
+                                </h2>
+                            </div>
+                            <ul class="topic-body" id="first-topic-body">
+                                <li>
+                                    Como eu começo a usar o sistema?
+                                    <ol type="1">
+                                        <li>Acesse nossa página de cadastro em <a href="#">Cadastro</a>.</li>
+                                        <li>Preencha suas informações para criar uma conta.</li>
+                                        <li>Confirme seu endereço de e-mail através do link que enviaremos.</li>
+                                        <li>Pronto! Faça o login e comece a explorar.</li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    Quais são os pré-requisitos para usar o Sistema?
+                                    <ul>
+                                        <li>Nosso sistema é baseado na nuvem, então tudo o que você precisa é de um
+                                            dispositivo com
+                                            acesso à internet e um navegador moderno, como Google Chrome, Mozilla
+                                            Firefox ou
+                                            Safari.
+                                            Não é necessária a instalação de nenhum software adicional.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Existe uma versão gratuita ou um período de teste?
+                                    <ul>
+                                        <li>Sim! Oferecemos um período de teste gratuito de 14 dias para que você possa
+                                            explorar todas as funcionalidades do nosso plano Premium. Não é necessário
+                                            cartão de crédito para começar.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </div>
+                    <div class="topic-div">
+                        <li class="topic">
+                            <div class="topic-title-div " id="second-topic-title-div">
+                                <button class="button-show" id="button2">
+                                    <span class="row"></span>
+                                    <span class="row"></span>
+                                </button>
+                                <h2 class="topic-title" id="second-topic-title">
+                                    Gerenciamento de Conta e Assinatura
+                                </h2>
+                            </div>
+                            <ul class="topic-body" id="second-topic-body">
+                                <li>
+                                    Como faço para alterar minha senha?
+                                    <ul>
+                                        <li>Para alterar sua senha, faça login, clique no ícone do seu perfil e vá para
+                                            "Configurações da Conta". Na aba
+                                            "Segurança", você encontrará a opção para definir uma nova senha.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Como posso atualizar minhas informações de perfil ou de faturamento?
+                                    <ul>
+                                        <li>Você pode atualizar seus dados a qualquer momento. Suas informações de
+                                            perfil
+                                            estão em "Configurações da Conta", e os
+                                            dados de pagamento e faturamento podem ser gerenciados na seção "Assinatura
+                                            e
+                                            Faturamento".</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Quais são os planos disponíveis e o que cada um oferece?
+                                    <ul>
+                                        <li>
+                                            Oferecemos diferentes planos para se adequar às suas necessidades. Você pode
+                                            ver
+                                            uma tabela comparativa completa com
+                                            funcionalidades e preços em nossa página de preços: <a href="#">Planos</a>.
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </div>
+                    <div class="topic-div">
+                        <li class="topic">
+                            <div class="topic-title-div" id="third-topic-title-div">
+                                <button class="button-show" id="button3">
+                                    <span class="row"></span>
+                                    <span class="row"></span>
+                                </button>
+                                <h2 class="topic-title" id="third-topic-title">
+                                    Suporte e Solução de Problemas
+                                </h2>
+                            </div>
+                            <ul class="topic-body" id="third-topic-body">
+                                <li>
+                                    O que devo fazer se encontrar um erro ou um problema técnico?
+                                    <ul>
+                                        <li>
+                                            Se encontrar um problema, recomendamos primeiro limpar o cache do seu
+                                            navegador.
+                                            Se o erro persistir, por favor,
+                                            entre
+                                            em contato com nossa equipe de suporte em <a href="#">Suporte</a> com o
+                                            máximo
+                                            de detalhes possível (incluindo
+                                            capturas de
+                                            tela do erro) para que possamos ajudar rapidamente.
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Esqueci minha senha. Como posso recuperá-la?
+                                    <ul>
+                                        <li>
+                                            Não se preocupe! Na página de login, clique no link "Esqueceu sua senha?".
+                                            Você
+                                            precisará inserir seu e-mail e nós
+                                            enviaremos as instruções para você criar uma nova senha.
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Qual é o tempo médio de resposta do suporte técnico?
+                                    <ul>
+                                        <li>
+                                            Nossa equipe de suporte está disponível de segunda a sexta, das 9h às 18h
+                                            (Horário de Brasília). Nosso objetivo é responder a
+                                            todas as solicitações em até 24 horas úteis.
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <script>
+        const button1 = document.getElementById("button1")
+        const button2 = document.getElementById("button2")
+        const button3 = document.getElementById("button3")
+
+        const topicBody1 = document.getElementById("first-topic-body")
+        const topicBody2 = document.getElementById("second-topic-body")
+        const topicBody3 = document.getElementById("third-topic-body")
+
+        const topicTitle1 = document.getElementById("first-topic-title-div")
+        const topicTitle2 = document.getElementById("second-topic-title-div")
+        const topicTitle3 = document.getElementById("third-topic-title-div")
+
+        button1.addEventListener("click", () => {
+            button1.classList.toggle("ativo")
+            topicBody1.classList.toggle("visible1")
+            topicTitle1.classList.toggle("showDiv1")
+
+        })
+
+        button2.addEventListener("click", () => {
+            button2.classList.toggle("ativo")
+            topicBody2.classList.toggle("visible2")
+            topicTitle2.classList.toggle("showDiv2")
+
+        })
+
+        button3.addEventListener("click", () => {
+            button3.classList.toggle("ativo")
+            topicBody3.classList.toggle("visible3")
+            topicTitle3.classList.toggle("showDiv3")
+
+        })
+    </script>
+</body>
+
+</html>
