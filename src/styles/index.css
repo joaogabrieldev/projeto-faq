@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+* {
+  user-select: none;
+}
+
+body {
+  background-color: wheat;
+}
+
+header h1 {
+  text-align: center;
+  position: relative;
+  top: 15px;
+  color: #232323;
+  font-family: "Raleway";
+}
+
+main {
+  padding: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: #463f3f;
+  color: white;
+  margin: 0px;
+  border-radius: 20px;
+  width: 70%;
+  height: auto;
+  overflow: hidden;
+  box-shadow: rgba(23, 23, 23, 0.4) 0px 5px, rgba(23, 23, 23, 0.3) 0px 10px,
+    rgba(23, 23, 23, 0.2) 0px 15px, rgba(23, 23, 23, 0.1) 0px 20px,
+    rgba(23, 23, 23, 0.05) 0px 25px;
+}
+
+.faq-title {
+  text-align: center;
+  padding-top: 2px;
+  font-family: "Lato";
+  font-weight: bold;
+}
+
+.faq-body {
+  background-color: #232323;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin-bottom: -16px;
+}
+
+.topic-title-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+.topic-div {
+  margin-left: -40px;
+  padding: 50px;
+  border-radius: 20px;
+}
+
+.button-show {
+  border: transparent;
+  background-color: transparent;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  cursor: pointer;
+  height: 16px;
+  width: 23px;
+  /* background-color: red; */
+
+  transition: all 0.3s cubic-bezier(0.11, 0.56, 0.48, 0.95);
+}
+
+.row {
+  border: 1px solid white;
+  background-color: white;
+  height: 4px;
+  border-radius: 6px;
+}
+
+.row:first-child {
+  transform: translate(0px, 5px);
+  /* background-color: red; */
+}
+
+.row:last-child {
+  transform: translate(0px, -3px) rotate(90deg);
+}
+
+.button-show.ativo {
+  transform: rotate(45deg);
+}
+
+.topic {
+  list-style-type: none;
+}
+
+.topic-title-div {
+  background-color: #463f3fd8;
+  margin-left: -20px;
+  margin-right: -20px;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  position: relative;
+  z-index: 3;
+  font-family: "Lato";
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.topic-title-div.showDiv1,
+.topic-title-div.showDiv2,
+.topic-title-div.showDiv3 {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+#first-topic-title-div {
+  margin-top: -15px;
+}
+
+#second-topic-title-div,
+#third-topic-title-div {
+  margin-top: -70px;
+}
+
+.topic-body {
+  display: none;
+  padding: 20px;
+  list-style-type: none;
+  background-color: white;
+  color: black;
+  margin-right: -20px;
+  margin-left: -20px;
+  position: relative;
+  z-index: 2;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.topic-body.visible1 {
+  display: block;
+}
+
+.topic-body.visible2 {
+  display: block;
+}
+
+.topic-body.visible3 {
+  display: block;
+}
+
+.subtopic-title {
+  background-color: #232323;
+  color: white;
+  width: 110%;
+  margin-left: -20px;
+  text-align: start;
+  padding: 5px;
+  text-indent: 10px;
+  font-family: "Lato";
+}
+
+#first-topic-body ol li {
+  margin-top: 10px;
+  margin-left: -12px;
+}
+
+#first-topic-body ul li {
+  margin-top: 10px;
+  margin-left: -18px;
+  padding: 16px 0px;
+}
+
+.topic-body {
+  font-family: "Raleway";
+  font-weight: 500;
+}

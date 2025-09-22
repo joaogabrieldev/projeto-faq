@@ -6,166 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="FAQ Project - João Gabriel R. R.">
     <meta name="author" content="João Gabriel R. R.">
-    <meta name="keywords" content="FAQ">
+    <meta name="keywords" content="FAQ, HTML & CSS FAQ, FRONTEND">
+    <link rel="stylesheet" href="src/styles/index.css">
     <title>Projeto - FAQ</title>
-    <style>
-        body {
-            background-color: wheat;
-        }
-        
-        main {
-            padding: 35px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .container {
-            background-color: #463f3f;
-            color: white;
-            margin: 0px;
-            border-radius: 20px;
-            width: 65%;
-            height: auto;
-            overflow: hidden;
-        }
-
-        .faq-title {
-            text-align: center;
-            padding-top: 2px;
-        }
-
-        .faq-body {
-            background-color: #232323;
-            border-bottom-left-radius: 20px;
-            border-bottom-right-radius: 20px;
-            margin-bottom: -16px;
-
-        }
-
-        .topic-title-div {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .topic-div {
-            margin-left: -40px;
-            padding: 50px;
-            border-radius: 20px;
-
-        }
-
-        .button-show {
-            border: transparent;
-            background-color: transparent;
-            padding: 0;
-
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-
-            cursor: pointer;
-            height: 16px;
-            width: 23px;
-            /* background-color: red; */
-
-            transition: all 0.3s cubic-bezier(0.11, 0.56, 0.48, 0.95);
-        }
-
-        .row {
-            border: 1px solid white;
-            background-color: white;
-            height: 4px;
-            border-radius: 6px;
-
-        }
-
-        .row:first-child {
-            transform: translate(0px, 5px);
-            /* background-color: red; */
-        }
-
-        .row:last-child {
-            transform: translate(0px, -3px) rotate(90deg);
-        }
-
-        .button-show.ativo {
-            transform: rotate(45deg);
-        }
-
-        .topic {
-            list-style-type: none;
-        }
-
-        .topic-title-div {
-            background-color: #463f3fd8;
-            margin-left: -20px;
-            margin-right: -20px;
-            color: white;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 10px;
-            position: relative;
-            z-index: 3;
-
-
-        }
-
-        .topic-title-div.showDiv1 {
-            border-bottom-left-radius: 0px;
-            border-bottom-right-radius: 0px;
-        }
-
-        .topic-title-div.showDiv2 {
-            border-bottom-left-radius: 0px;
-            border-bottom-right-radius: 0px;
-        }
-
-        .topic-title-div.showDiv3 {
-            border-bottom-left-radius: 0px;
-            border-bottom-right-radius: 0px;
-        }
-
-        #first-topic-title-div {
-            margin-top: -15px;
-        }
-
-        #second-topic-title-div,
-        #third-topic-title-div {
-            margin-top: -70px;
-        }
-
-
-        .topic-body {
-            display: none;
-            padding: 20px;
-            list-style-type: none;
-            background-color: white;
-            color: black;
-            margin-right: -20px;
-            margin-left: -20px;
-            position: relative;
-            z-index: 2;
-            border-bottom-left-radius: 20px;
-            border-bottom-right-radius: 20px;
-        }
-
-        .topic-body.visible1 {
-            display: block;
-        }
-
-        .topic-body.visible2 {
-            display: block;
-        }
-
-        .topic-body.visible3 {
-            display: block;
-        }
-    </style>
 </head>
 
 <body>
@@ -192,8 +35,8 @@
                             </div>
                             <ul class="topic-body" id="first-topic-body">
                                 <li>
-                                    Como eu começo a usar o sistema?
-                                    <ol type="1">
+                                    <h3 class="subtopic-title">Como eu começo a usar o sistema?</h3>
+                                    <ol type="none">
                                         <li>Acesse nossa página de cadastro em <a href="#">Cadastro</a>.</li>
                                         <li>Preencha suas informações para criar uma conta.</li>
                                         <li>Confirme seu endereço de e-mail através do link que enviaremos.</li>
@@ -201,7 +44,7 @@
                                     </ol>
                                 </li>
                                 <li>
-                                    Quais são os pré-requisitos para usar o Sistema?
+                                    <h3 class="subtopic-title">Quais são os pré-requisitos para usar o Sistema?</h3>
                                     <ul>
                                         <li>Nosso sistema é baseado na nuvem, então tudo o que você precisa é de um
                                             dispositivo com
@@ -212,7 +55,7 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    Existe uma versão gratuita ou um período de teste?
+                                    <h3 class="subtopic-title">Existe uma versão gratuita ou um período de teste?</h3>
                                     <ul>
                                         <li>Sim! Oferecemos um período de teste gratuito de 14 dias para que você possa
                                             explorar todas as funcionalidades do nosso plano Premium. Não é necessário
@@ -234,8 +77,8 @@
                                 </h2>
                             </div>
                             <ul class="topic-body" id="second-topic-body">
-                                <li>
-                                    Como faço para alterar minha senha?
+                                <li >
+                                    <h3 class="subtopic-title">Como faço para alterar minha senha?</h3>
                                     <ul>
                                         <li>Para alterar sua senha, faça login, clique no ícone do seu perfil e vá para
                                             "Configurações da Conta". Na aba
@@ -243,7 +86,7 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    Como posso atualizar minhas informações de perfil ou de faturamento?
+                                    <h3 class="subtopic-title" style="text-align: center; text-indent: 0px; padding-left: 0px;">Como posso atualizar minhas informações de perfil ou de faturamento?</h3>
                                     <ul>
                                         <li>Você pode atualizar seus dados a qualquer momento. Suas informações de
                                             perfil
@@ -254,7 +97,7 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    Quais são os planos disponíveis e o que cada um oferece?
+                                    <h3 class="subtopic-title">Quais são os planos disponíveis e o que cada um oferece?</h3>
                                     <ul>
                                         <li>
                                             Oferecemos diferentes planos para se adequar às suas necessidades. Você pode
@@ -280,7 +123,7 @@
                             </div>
                             <ul class="topic-body" id="third-topic-body">
                                 <li>
-                                    O que devo fazer se encontrar um erro ou um problema técnico?
+                                    <h3 class="subtopic-title" style="text-align: center; text-indent: 0px;">O que devo fazer se encontrar um erro ou um problema técnico?</h3>
                                     <ul>
                                         <li>
                                             Se encontrar um problema, recomendamos primeiro limpar o cache do seu
@@ -296,7 +139,7 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    Esqueci minha senha. Como posso recuperá-la?
+                                    <h3 class="subtopic-title">Esqueci minha senha. Como posso recuperá-la?</h3>
                                     <ul>
                                         <li>
                                             Não se preocupe! Na página de login, clique no link "Esqueceu sua senha?".
@@ -307,7 +150,7 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    Qual é o tempo médio de resposta do suporte técnico?
+                                    <h3 class="subtopic-title">Qual é o tempo médio de resposta do suporte técnico?</h3>
                                     <ul>
                                         <li>
                                             Nossa equipe de suporte está disponível de segunda a sexta, das 9h às 18h
@@ -322,41 +165,8 @@
                 </ul>
             </div>
         </div>
+        <script src="src/scripts/index.js"></script>
     </main>
-    <script>
-        const button1 = document.getElementById("button1")
-        const button2 = document.getElementById("button2")
-        const button3 = document.getElementById("button3")
-
-        const topicBody1 = document.getElementById("first-topic-body")
-        const topicBody2 = document.getElementById("second-topic-body")
-        const topicBody3 = document.getElementById("third-topic-body")
-
-        const topicTitle1 = document.getElementById("first-topic-title-div")
-        const topicTitle2 = document.getElementById("second-topic-title-div")
-        const topicTitle3 = document.getElementById("third-topic-title-div")
-
-        button1.addEventListener("click", () => {
-            button1.classList.toggle("ativo")
-            topicBody1.classList.toggle("visible1")
-            topicTitle1.classList.toggle("showDiv1")
-
-        })
-
-        button2.addEventListener("click", () => {
-            button2.classList.toggle("ativo")
-            topicBody2.classList.toggle("visible2")
-            topicTitle2.classList.toggle("showDiv2")
-
-        })
-
-        button3.addEventListener("click", () => {
-            button3.classList.toggle("ativo")
-            topicBody3.classList.toggle("visible3")
-            topicTitle3.classList.toggle("showDiv3")
-
-        })
-    </script>
 </body>
 
 </html>
